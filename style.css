@@ -1,0 +1,258 @@
+html {
+  font-style: 100%;
+}
+
+body {
+  color: #121212;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+a {
+  color: #121212;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.sec-title {
+  font-size: 36px;
+  margin: 100px 0px 36px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px 10px;
+}
+
+.navi {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  color: #fff;
+  padding: 64px 24px;
+  background-color: #121212;
+  transition: all 0.5s;
+  z-index: 20;
+  opacity: 0;
+}
+.navi a {
+  color: #fff;
+}
+.navi .navi-menu {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+  border-top: solid 1px #fff;
+}
+.navi .navi-menu li {
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: solid 1px #fff;
+}
+.navi .nav-sns li {
+  margin: 8px 0px;
+}
+
+.toggle_btn {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+
+.mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+.open .navi {
+  left: 0px;
+  opacity: 1;
+}
+.open .toggle_btn {
+  position: fixed;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  transform: translateY(-10px) rotate(315deg);
+}
+.open .mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.main .bg-video {
+  width: 100%;
+  max-height: 960px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .swiper {
+  width: 100%;
+}
+.main .swiper img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .swiper .swiper-box {
+  margin: 0px 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 0px 24px 56px;
+}
+.grid .item {
+  box-shadow: 0px 3px 8px 0px #9E9E9E;
+}
+.grid .item .items {
+  aspect-ratio: 3/2;
+}
+
+.item-content {
+  padding: 24px 32px;
+}
+.item-content .item-text {
+  padding: 16px 0px;
+  font-weight: bold;
+}
+.item-content .item-date {
+  text-align: right;
+  font-size: 12px;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.scrollin {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact {
+  background-color: #121212;
+  color: #fff;
+  padding: 56px 36px;
+}
+.contact .con-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.contact .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.contact-info p {
+  margin-bottom: 32px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.contact .button {
+  width: 45%;
+}
+.contact .button input {
+  background-color: #121212;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.contact .button input:hover {
+  background-color: #fff;
+  color: #121212;
+}
+
+.footer {
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .contact .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .contact .button {
+    width: 100%;
+  }
+  .main .bg-video {
+    height: 100vh;
+  }
+}/*# sourceMappingURL=style.css.map */
